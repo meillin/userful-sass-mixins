@@ -1,0 +1,30 @@
+/**
+ * Mixin and placeholder for vertical align content of a container
+ */
+
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+// Usage
+.element p {
+	@include vertical-align;
+}
+
+/* Placeholder selector */
+%vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+// Usage
+.element p {
+	@extend %vertical-align;
+}
